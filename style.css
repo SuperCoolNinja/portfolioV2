@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* some reset */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* default settings : */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* root variables */
+:root {
+  --white: #ffffff;
+  --whiteOpacity: #ffffffa6;
+
+  /* Big screen fontSize */
+  --bs_titleHeaderSize: 12rem;
+  --bs_contentHeaderSize: 3rem;
+  --bs_titleSectionSize: 2.5rem;
+  --bs_subtitleSectionSize: 3.5rem;
+  --bs_linksItemSize: 1.8rem;
+  --bs_aboutContentSize: 1.9rem;
+  --bs_btnVisitSize: 1.5rem;
+  --bs_cardContentSize: 1.7rem;
+
+  /* margin */
+  --marginTopSection: 50rem;
+
+  /* padding */
+  --paddingLeft: 20rem;
+  --paddingRight: 20rem;
+
+  /* width */
+  --maxWidthAboutContent: 70rem;
+  --bs_widthContainerSkills: 80%;
+}
+
+/*BG IS THE BACKGROUND IMAGE WHICH WILL BE CHANGE DYNAMICALY IN DEPEND OF EUROPE HOURS*/
+.bg {
+  position: fixed;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.blur {
+  background-attachment: fixed, scroll;
+  backdrop-filter: blur(8px);
+  padding-bottom: 5rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* global */
+.title {
+  color: var(--whiteOpacity);
+  font-size: var(--bs_titleSectionSize);
+}
+.subtitle {
+  color: var(--white);
+  font-size: var(--bs_subtitleSectionSize);
+}
+.about-content {
+  color: var(--whiteOpacity);
+  font-size: var(--bs_aboutContentSize);
+  padding: 1rem 0;
+  width: var(--maxWidthAboutContent);
+}
+.btn-visit {
+  padding: 1rem 3rem;
+  border: 0.05rem solid var(--whiteOpacity);
+  border-radius: 15rem;
+  font-size: var(--bs_btnVisitSize);
+  color: var(--whiteOpacity);
+}
+.card-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  width: 25rem;
+  height: 25rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.514);
+  backdrop-filter: blur(17.5px);
+  -webkit-backdrop-filter: blur(17.5px);
+  transition: all 0.3s ease;
+}
+.card-item:hover {
+  transform: scale(1.1);
+  background: rgba(2, 2, 2, 0.6);
+  box-shadow: 0 4px 30px rgba(245, 245, 245, 0.089);
+  cursor: pointer;
+}
+.card-icon {
+  width: 10rem;
+  height: auto;
+  border-radius: 1rem;
+}
+.card-content:nth-child(0n + 2) {
+  margin-top: 2rem;
+}
+.card-content {
+  color: #ffffff;
+  font-size: var(--bs_cardContentSize);
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  padding-top: 1rem;
+  font-weight: 400;
+}
+
+
+
+/* container */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: var(--paddingLeft);
+  padding-right: var(--paddingRight);
+}
+
+
+
+
+/* header navbar */
+#container-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.links-item {
+  display: inline-block;
+  color: var(--whiteOpacity);
+  font-size: var(--bs_linksItemSize);
+  transition: all 0.1s ease-in-out;
+}
+.links-item:hover {
+  color: var(--white);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#container-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25rem;
+}
+#container-me--title {
+  font-size: var(--bs_titleHeaderSize);
+  color: var(--white);
+}
+.container-me--content {
+  font-size: var(--bs_contentHeaderSize);
+  color: var(--whiteOpacity);
+}
+
+.container-me--content:last-child {
+  margin-bottom: 10px;
+  padding-bottom: 3rem;
+}
+
+#container-visit {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+
+
+/* Section about */
+#container-about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: var(--marginTopSection);
+  gap: 30rem;
+}
+.wrapper-about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 1rem;
+}
+
+#about-image {
+  display: block;
+  width: 30rem;
+  height: auto;
+  border-radius: 15rem;
+}
+
+
+
+
+
+
+/* Section skill */
+#container-experiences {
+  margin-top: var(--marginTopSection);
+}
+.container-list-skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6rem;
+  width: var(--bs_widthContainerSkills);
+  height: auto;
+}
+
+/* Section Projects */
+#container-projects {
+  margin-top: var(--marginTopSection);
+}
