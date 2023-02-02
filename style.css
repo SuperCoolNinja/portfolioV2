@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("satoshi.css");
 
 /* some reset */
 *,
@@ -7,10 +7,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
 }
 
 a,
@@ -27,8 +23,13 @@ html {
 
 body {
   position: relative;
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
+  font-family: "Satoshi-Variable";
+  font-family: "Satoshi-Light";
+  font-family: "Satoshi-Regular";
+  font-family: "Satoshi-Medium";
+  font-family: "Satoshi-Bold";
+  font-family: "Satoshi-Black";
+  height: 100vh;
   width: 100%;
 }
 
@@ -45,18 +46,36 @@ body {
   --bs_linksItemSize: 1.8rem;
   --bs_aboutContentSize: 1.9rem;
   --bs_btnVisitSize: 1.5rem;
-  --bs_cardContentSize: 1.7rem;
+  --bs_cardContentSize: 2rem;
+
+  /* Medium screen fontSize */
+  --ms_titleHeaderSize: 8rem;
+  --ms_contentHeaderSize: 2.5rem;
+
+  /* Tablette screen fontSize */
+  --ts__titleHeaderSize: 7rem;
+  --ts_contentHeaderSize: 2rem;
+  --ts_aboutContentSize: 1.8rem;
 
   /* margin */
   --marginTopSection: 50rem;
 
   /* padding */
-  --paddingLeft: 20rem;
-  --paddingRight: 20rem;
+  --paddingLeft: 30rem;
+  --paddingRight: 30rem;
+
+  /* paddingSM */
+  --sm_paddingLeft: 18rem;
+  --sm_paddingRight: 18rem;
 
   /* width */
   --maxWidthAboutContent: 70rem;
-  --bs_widthContainerSkills: 80%;
+  --bs_widthContainerSkills: 100%;
+  --ts_maxWidthAboutContent: 50rem;
+
+  /* width tablette */
+  --ts_paddingLeft: 0rem;
+  --ts_paddingRight: 0rem;
 }
 
 /*BG IS THE BACKGROUND IMAGE WHICH WILL BE CHANGE DYNAMICALY IN DEPEND OF EUROPE HOURS*/
@@ -100,18 +119,19 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: 2rem;
   width: 25rem;
   height: 25rem;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.466);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.514);
   backdrop-filter: blur(17.5px);
   -webkit-backdrop-filter: blur(17.5px);
   transition: all 0.3s ease;
+  flex: auto;
 }
 .card-item:hover {
   transform: scale(1.1);
@@ -134,10 +154,8 @@ body {
   padding: 0;
   margin: 0;
   padding-top: 1rem;
-  font-weight: 400;
+  font-weight: bold;
 }
-
-
 
 /* container */
 .container {
@@ -147,36 +165,12 @@ body {
   padding-right: var(--paddingRight);
 }
 
-
-
-
-/* header navbar */
-#container-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 2rem;
-  padding-top: 3rem;
-}
-
-.links-item {
-  display: inline-block;
-  color: var(--whiteOpacity);
-  font-size: var(--bs_linksItemSize);
-  transition: all 0.1s ease-in-out;
-}
-.links-item:hover {
-  color: var(--white);
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
 #container-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 25rem;
+  padding-top: 25rem;
 }
 #container-me--title {
   font-size: var(--bs_titleHeaderSize);
@@ -186,19 +180,15 @@ body {
   font-size: var(--bs_contentHeaderSize);
   color: var(--whiteOpacity);
 }
-
 .container-me--content:last-child {
   margin-bottom: 10px;
   padding-bottom: 3rem;
 }
-
 #container-visit {
   display: flex;
   justify-content: center;
   gap: 6rem;
 }
-
-
 
 /* Section about */
 #container-about {
@@ -207,14 +197,14 @@ body {
   flex-wrap: wrap;
   align-items: center;
   margin-top: var(--marginTopSection);
-  gap: 30rem;
+  gap: 5rem;
 }
 .wrapper-about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: start;
-  gap: 1rem;
+  justify-content: center;
+  flex: auto;
 }
 
 #about-image {
@@ -224,11 +214,6 @@ body {
   border-radius: 15rem;
 }
 
-
-
-
-
-
 /* Section skill */
 #container-experiences {
   margin-top: var(--marginTopSection);
@@ -237,12 +222,120 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 6rem;
+  gap: 5rem;
   width: var(--bs_widthContainerSkills);
   height: auto;
+  margin: 1rem auto;
 }
 
 /* Section Projects */
 #container-projects {
   margin-top: var(--marginTopSection);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1731px) {
+  #container-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10rem;
+  }
+  .wrapper-about {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 1356px) {
+  #container-me--title {
+    font-size: var(--ms_titleHeaderSize);
+  }
+
+  .container-me--content {
+    font-size: var(--ms_contentHeaderSize);
+  }
+
+  .container-list-skills {
+    padding: 0 0rem;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1111px) {
+  .container {
+    padding-left: var(--ts_paddingLeft);
+    padding-right: var(--ts_paddingRight);
+  }
+
+  .container-list-skills {
+    padding: 0 25rem;
+  }
+
+  #container-me--title {
+    font-size: var(--ts__titleHeaderSize);
+  }
+
+  .container-me--content {
+    font-size: var(--ts_contentHeaderSize);
+  }
+}
+
+@media screen and (max-width: 735px) {
+  #container-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #container-me--title {
+    text-align: center;
+  }
+  .container-me--content {
+    text-align: center;
+  }
+
+  .wrapper-about {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about-content {
+    font-size: var(--ts_aboutContentSize);
+    width: var(--ts_maxWidthAboutContent);
+  }
+
+  .container-list-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    width: var(--bs_widthContainerSkills);
+    height: auto;
+    margin: 1rem auto;
+    padding: 0 2rem;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
 }
