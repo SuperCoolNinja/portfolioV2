@@ -8,3 +8,4 @@ Full Vanilla, no framework used for this static website. Everything was done fro
 * CSS.
 * JS.
 
+## You can visit this new portfolio under construction here : https://supercoolninja.github.io/portfolioV2/
