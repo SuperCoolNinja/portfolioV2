@@ -108,6 +108,11 @@ body {
   border-radius: 15rem;
   font-size: var(--bs_btnVisitSize);
   color: var(--whiteOpacity);
+  transition: transform 0.3s ease-in-out;
+}
+.btn-visit:hover{
+  transform: scale(1.15);
+  box-shadow: 0 4px 30px rgba(150, 150, 150, 0.3);
 }
 .card-item {
   position: relative;
