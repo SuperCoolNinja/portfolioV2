@@ -1,4 +1,4 @@
-@import url("satoshi.css");
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
 
 /* some reset */
 *,
@@ -23,12 +23,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Satoshi-Variable";
-  font-family: "Satoshi-Light";
-  font-family: "Satoshi-Regular";
-  font-family: "Satoshi-Medium";
-  font-family: "Satoshi-Bold";
-  font-family: "Satoshi-Black";
+  font-family: 'Oxygen', sans-serif;
   height: 100vh;
   width: 100%;
 }
