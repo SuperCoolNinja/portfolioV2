@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
 
 /* some reset */
 *,
@@ -23,7 +23,7 @@ html {
 
 body {
   position: relative;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   height: 100vh;
   width: 100%;
 }
@@ -83,11 +83,15 @@ body {
 .blur {
   position: absolute;
   background-attachment: fixed, scroll;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   padding-bottom: 5rem;
 }
 
 /* global */
+.bold {
+  color: #ffffff;
+  font-weight: bold;
+}
 .title {
   color: var(--whiteOpacity);
   font-size: var(--bs_titleSectionSize);
@@ -110,7 +114,7 @@ body {
   color: var(--whiteOpacity);
   transition: transform 0.3s ease-in-out;
 }
-.btn-visit:hover{
+.btn-visit:hover {
   transform: scale(1.15);
   box-shadow: 0 4px 30px rgba(150, 150, 150, 0.3);
 }
