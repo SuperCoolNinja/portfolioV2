@@ -28,6 +28,21 @@ body {
   width: 100%;
 }
 
+/* SCROLL BAR */
+/* Track */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: #00000073;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #00000073;
+}
+
 /* root variables */
 :root {
   --white: #ffffff;
@@ -73,7 +88,6 @@ body {
   --bs_widthContainerSkills: 100%;
   --ts_maxWidthAboutContent: 50rem;
   --ps_maxWidthAboutContent: 35rem;
-
 
   /* width tablette */
   --ts_paddingLeft: 0rem;
@@ -458,5 +472,4 @@ body {
     flex: none;
     margin: auto;
   }
-  
 }
