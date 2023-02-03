@@ -105,6 +105,7 @@ body {
   position: absolute;
   background-attachment: fixed, scroll;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding-bottom: 5rem;
 }
 
