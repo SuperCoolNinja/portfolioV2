@@ -1,5 +1,3 @@
-//Avoid mixing with global dom stuff
-
 const ratio = 0.1;
 const options = {
   root: null,
@@ -17,6 +15,8 @@ const handleIntersect = function (entries, observer) {
   });
 };
 
+
+//observer allow us to play animation when the target element is visible on the screen.
 const observer = new IntersectionObserver(handleIntersect, options);
 const section_to_play_anims = document
   .querySelectorAll(".playAnim")
