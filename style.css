@@ -50,6 +50,7 @@ body {
 
   /* Big screen fontSize */
   --bs_titleHeaderSize: 12rem;
+  --bs_subtitleHeaderSize: 1.8rem;
   --bs_contentHeaderSize: 3rem;
   --bs_titleSectionSize: 2.5rem;
   --bs_subtitleSectionSize: 3.5rem;
@@ -67,10 +68,13 @@ body {
   --ts_contentHeaderSize: 2rem;
   --ts_aboutContentSize: 1.8rem;
 
+
   /* Phone screen fontSize */
   --ps__titleHeaderSize: 5rem;
+  --ps_subTitleHeaderSize: 1.2rem;
   --ps_contentHeaderSize: 2rem;
-  --ps_aboutContentSize: 1.8rem;
+  --ps_aboutContentSize: 1.7rem;
+  --ps_cardContentSize: 1.2rem;
 
   /* margin */
   --marginTopSection: 50rem;
@@ -87,7 +91,7 @@ body {
   --maxWidthAboutContent: 70rem;
   --bs_widthContainerSkills: 100%;
   --ts_maxWidthAboutContent: 50rem;
-  --ps_maxWidthAboutContent: 35rem;
+  --ps_maxWidthAboutContent: 32rem;
 
   /* width tablette */
   --ts_paddingLeft: 0rem;
@@ -215,9 +219,12 @@ body {
   font-size: var(--bs_contentHeaderSize);
   color: var(--whiteOpacity);
 }
-.container-me--content:last-child {
-  margin-bottom: 10px;
-  padding-bottom: 3rem;
+#container-me > p:nth-child(even) {
+  margin-top: 1rem;
+}
+#container-me > p:nth-child(odd) {
+  margin-bottom: 3rem;
+  font-size: var(--bs_subtitleHeaderSize);
 }
 #container-visit {
   animation-name: fadeWelcomeTitleLeft;
@@ -355,6 +362,11 @@ body {
     font-size: var(--ms_titleHeaderSize);
   }
 
+  #container-me > p:nth-child(odd) {
+    font-size: var(--ts_subTitleHeaderSize);
+  }
+
+
   .container-me--content {
     font-size: var(--ms_contentHeaderSize);
   }
@@ -398,6 +410,10 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+  }
+  
+  #container-me > p:nth-child(odd) {
+    font-size: var(--ts_subTitleHeaderSize);
   }
 
   #container-me--title {
@@ -450,27 +466,27 @@ body {
     font-size: var(--ps__titleHeaderSize);
   }
 
+  #container-me > p:nth-child(odd) {
+    margin-top: 1rem;
+    font-size: var(--ps_subTitleHeaderSize);
+  }
+
   .about-content {
     color: var(--whiteOpacity);
-    font-size: var(--bs_aboutContentSize);
+    font-size: var(--ps_aboutContentSize);
     width: var(--ps_maxWidthAboutContent);
   }
 
   .card-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-    height: 25rem;
-    background: rgba(0, 0, 0, 0.466);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.514);
-    backdrop-filter: blur(17.5px);
-    -webkit-backdrop-filter: blur(17.5px);
-    transition: all 0.3s ease;
-    flex: none;
-    margin: auto;
+    width: 14rem;
+    height: 15rem;
+  }
+
+  .card-icon {
+    width: 5rem;
+  }
+
+  .card-content {
+    font-size: var(--ps_cardContentSize);
   }
 }
