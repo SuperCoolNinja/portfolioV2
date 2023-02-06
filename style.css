@@ -304,7 +304,7 @@ body {
   align-items: center;
   gap: 10rem;
   width: var(--bs_wrapperWidthProjects);
-  padding: 2rem 0;
+  padding-top: 2rem;
   padding-bottom: 15em;
 }
 
@@ -313,15 +313,16 @@ body {
   height: auto;
   aspect-ratio: 16/9;
   border-radius: 2rem;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.8);
   object-fit: cover;
+  border: 0.1rem solid rgba(8, 8, 8, 0.438);
+  transition: all 0.2s ease-in-out;
 }
 
 .img-project:hover {
   transform: scale(1.05);
   cursor: pointer;
-  box-shadow: 0 2rem 3rem rgba(201, 201, 201, 0.3);
+  box-shadow: 0px 12px 15px -3px rgba(240, 239, 239, 0.3);
 }
 
 /* ANIMATION */
