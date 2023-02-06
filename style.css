@@ -548,4 +548,14 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .img-project {
+    width: 30rem;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    object-fit: cover;
+  }
 }
