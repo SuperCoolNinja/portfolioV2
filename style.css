@@ -16,6 +16,10 @@ a:hover {
   color: white;
 }
 
+ul {
+  list-style: none;
+}
+
 /* default settings : */
 html {
   font-size: 62.5%;
@@ -68,7 +72,6 @@ body {
   --ts_contentHeaderSize: 2rem;
   --ts_aboutContentSize: 1.8rem;
 
-
   /* Phone screen fontSize */
   --ps__titleHeaderSize: 5rem;
   --ps_subTitleHeaderSize: 1.2rem;
@@ -92,6 +95,9 @@ body {
   --bs_widthContainerSkills: 100%;
   --ts_maxWidthAboutContent: 50rem;
   --ps_maxWidthAboutContent: 32rem;
+  --bs_wrapperWidthProjects: 100%;
+  --ts_wrapperWidthProjects: 35rem;
+  --ps_wrapperWidthProjects: 35rem;
 
   /* width tablette */
   --ts_paddingLeft: 0rem;
@@ -285,7 +291,37 @@ body {
 
 /* Section Projects */
 #container-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-top: var(--marginTopSection);
+}
+
+.wrapper-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10rem;
+  width: var(--bs_wrapperWidthProjects);
+  padding: 2rem 0;
+  padding-bottom: 15em;
+}
+
+.img-project {
+  width: 60rem;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  object-fit: cover;
+}
+
+.img-project:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 2rem 3rem rgba(201, 201, 201, 0.3);
 }
 
 /* ANIMATION */
@@ -366,7 +402,6 @@ body {
     font-size: var(--ts_subTitleHeaderSize);
   }
 
-
   .container-me--content {
     font-size: var(--ms_contentHeaderSize);
   }
@@ -381,6 +416,12 @@ body {
 
   .subtitle {
     text-align: center;
+  }
+
+  .wrapper-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -401,6 +442,12 @@ body {
   .container-me--content {
     font-size: var(--ts_contentHeaderSize);
   }
+
+  .wrapper-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 735px) {
@@ -411,7 +458,7 @@ body {
     align-items: center;
     margin: 0 auto;
   }
-  
+
   #container-me > p:nth-child(odd) {
     font-size: var(--ts_subTitleHeaderSize);
   }
@@ -453,6 +500,12 @@ body {
   .subtitle {
     text-align: center;
   }
+
+  .wrapper-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -488,5 +541,11 @@ body {
 
   .card-content {
     font-size: var(--ps_cardContentSize);
+  }
+
+  .wrapper-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
