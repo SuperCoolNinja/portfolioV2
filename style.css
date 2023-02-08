@@ -62,6 +62,9 @@ body {
   --bs_aboutContentSize: 1.9rem;
   --bs_btnVisitSize: 1.5rem;
   --bs_cardContentSize: 2rem;
+  --bs_overlay_titleSize: 2rem;
+  --bs_overlay_description: 1.7rem;
+  --bs_overlay_link: 2rem;
 
   /* Medium screen fontSize */
   --ms_titleHeaderSize: 8rem;
@@ -71,6 +74,9 @@ body {
   --ts__titleHeaderSize: 7rem;
   --ts_contentHeaderSize: 2rem;
   --ts_aboutContentSize: 1.8rem;
+  --ts_overlay_titleize: 2rem;
+  --ts_overlay_description: 1.5rem;
+  --ts_overlay_link: 1rem;
 
   /* Phone screen fontSize */
   --ps__titleHeaderSize: 5rem;
@@ -78,6 +84,9 @@ body {
   --ps_contentHeaderSize: 2rem;
   --ps_aboutContentSize: 1.7rem;
   --ps_cardContentSize: 1rem;
+  --ps_overlay_titleize: 2rem;
+  --ps_overlay_description: 1.5rem;
+  --ps_overlay_link: 1rem;
 
   /* margin */
   --marginTopSection: 50rem;
@@ -309,20 +318,109 @@ body {
 }
 
 .img-project {
+  position: relative;
   width: 60rem;
   height: auto;
   aspect-ratio: 16/9;
   border-radius: 2rem;
-  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.8);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.7);
   object-fit: cover;
   border: 0.1rem solid rgba(8, 8, 8, 0.438);
-  transition: all 0.2s ease-in-out;
+  z-index: -1;
+  transition: all 1s ease-in-out;
 }
 
-.img-project:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-  box-shadow: 0px 12px 15px -3px rgba(240, 239, 239, 0.3);
+.parent-overlay {
+  position: relative;
+}
+
+.parent-overlay:hover {
+  border-radius: 2rem;
+  z-index: 3;
+}
+
+/* if we hover the parent-overlay then we add the animation to the child overlay */
+.parent-overlay:hover .overlay {
+  animation: overlayTransition 0.6s forwards ease-in-out;
+}
+
+/* if we hover the parent-overlay then we add the opacity to the img-project */
+.parent-overlay:hover .img-project {
+  opacity: 0.2;
+}
+
+/* if we hover the parent-overlay then we add the opacity to the text-content */
+.parent-overlay:hover .overlay h5 {
+  animation: opacityOverlayContent 2.5s forwards ease-in-out;
+}
+.parent-overlay:hover .overlay p {
+  animation: opacityOverlayContent 2.5s forwards ease-in-out;
+}
+.parent-overlay:hover .overlay a {
+  animation: opacityOverlayContent 2.5s forwards ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 2rem;
+  opacity: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.wrapper-overlay-btn {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.overlay h5 {
+  font-size: var(--bs_overlay_titleSize);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.overlay p {
+  font-size: var(--bs_overlay_description);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  opacity: 0;
+  padding: 0.5rem 3.5rem;
+  line-height: 2.7rem;
+}
+
+.overlay a {
+  display: block;
+  font-size: var(--bs_overlay_link);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  font-weight: bold;
+  background: #ffffff1c;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.overlay a:hover {
+  transform: scale(1.2);
 }
 
 /* ANIMATION */
@@ -373,6 +471,34 @@ body {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes overlayTransition {
+  0% {
+    position: absolute;
+    top: 0;
+    right: 0rem;
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    position: absolute;
+    width: 55%;
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes opacityOverlayContent {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
