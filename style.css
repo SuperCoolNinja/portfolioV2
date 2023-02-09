@@ -414,6 +414,47 @@ body {
   transform: scale(1.1);
 }
 
+/* FOOTER */
+.wrapper-footer-stack {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  bottom: -50rem;
+  left: 0;
+  width: 100%;
+  background: #000000b6;
+  padding: 1rem;
+}
+
+.wrapper-footer-stack > h3 {
+  color: white;
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.wrapper-footer-stack > p {
+  color: white;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.wrapper-footer-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.img-stack {
+  display: block;
+  width: 8rem;
+  height: auto;
+}
+
 /* ANIMATION */
 @keyframes fadeWelcomeTitleRight {
   0% {
