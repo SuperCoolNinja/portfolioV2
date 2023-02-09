@@ -113,7 +113,6 @@ body {
   --ts_paddingRight: 0rem;
 }
 
-/*BG IS THE BACKGROUND IMAGE WHICH WILL BE CHANGE DYNAMICALY IN DEPEND OF EUROPE HOURS*/
 .bg {
   position: fixed;
   object-fit: cover;
