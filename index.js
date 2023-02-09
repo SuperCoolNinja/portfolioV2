@@ -6,6 +6,7 @@ const options = {
 };
 
 const handleIntersect = function (entries, observer) {
+  // We go trough each playAnim class and add container-about-play-animation which allow the element to play animation when the view is on.
   entries.forEach(function (entry) {
     if (entry.intersectionRatio > ratio) {
       entry.target.classList.add("container-about-play-animation");
@@ -14,7 +15,6 @@ const handleIntersect = function (entries, observer) {
     }
   });
 };
-
 
 //observer allow us to play animation when the target element is visible on the screen.
 const observer = new IntersectionObserver(handleIntersect, options);

@@ -378,15 +378,6 @@ body {
   padding: 1rem;
 }
 
-.wrapper-overlay-btn {
-  display: flex;
-  flex-direction: row;
-  flex: auto;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
 .overlay h5 {
   font-size: var(--bs_overlay_titleSize);
   color: white;
@@ -684,5 +675,27 @@ body {
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out;
     object-fit: cover;
+  }
+
+  @keyframes overlayTransition {
+    0% {
+      position: absolute;
+      top: 0;
+      right: 0rem;
+      width: 0;
+      opacity: 0;
+    }
+
+    100% {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  .overlay p {
+    display: none;
   }
 }
