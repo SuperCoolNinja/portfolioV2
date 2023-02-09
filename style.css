@@ -738,4 +738,14 @@ body {
   .overlay p {
     display: none;
   }
+
+  .wrapper-footer-stack h3
+  {
+   font-size: 3rem;
+  }
+
+  .wrapper-footer-stack p
+  {
+   font-size: 1.5rem;
+  }
 }
