@@ -241,8 +241,8 @@ body {
   font-size: var(--bs_subtitleHeaderSize);
 }
 #container-visit {
-  animation-name: fadeWelcomeTitleLeft;
-  animation-duration: 2s;
+  animation-name: fadeWelcomeTitlePopPup;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   display: flex;
   justify-content: center;
@@ -458,17 +458,6 @@ body {
   0% {
     opacity: 0;
     transform: translate3d(-250px, 0, 0);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeWelcomeTitleLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(250px, 0, 0);
   }
 
   100% {
@@ -738,13 +727,11 @@ body {
     display: none;
   }
 
-  .wrapper-footer-stack h3
-  {
-   font-size: 3rem;
+  .wrapper-footer-stack h3 {
+    font-size: 3rem;
   }
 
-  .wrapper-footer-stack p
-  {
-   font-size: 1.5rem;
+  .wrapper-footer-stack p {
+    font-size: 1.5rem;
   }
 }
