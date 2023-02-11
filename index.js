@@ -59,30 +59,6 @@ async function OnPageLoaded() {
   const res = await local_FR.json();
   const resFR = res["local_fr"];
 
-  const ratio = 0.1;
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: ratio,
-  };
-
-  const handleIntersect = function (entries, observer) {
-    // We go trough each playAnim class and add container-about-play-animation which allow the element to play animation when the view is on.
-    entries.forEach(function (entry) {
-      if (entry.intersectionRatio > ratio) {
-        entry.target.classList.add("container-about-play-animation");
-        entry.target.style.opacity = 1;
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-
-  //observer allow us to play animation when the target element is visible on the screen.
-  const observer = new IntersectionObserver(handleIntersect, options);
-  const _ = document
-    .querySelectorAll(".playAnim")
-    .forEach((e) => observer.observe(e));
-
   //Languages FR:
   const userLang = navigator.language || navigator.userLanguage;
   const fr = "fr-FR";
