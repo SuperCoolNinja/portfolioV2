@@ -20,7 +20,7 @@
         "overlay_contentOneMarker": "Il s'agit d'un mod pour GTA V SOLO réalisé en C++.",
         "overlay_contentTwoMarker": "Il vous permet d'afficher un marqueur avec la distance entre vous et votre point de repère défini.",
         "overlay_contentOneConsole": "Il s'agit d'un mod pour GTA V SOLO réalisé en C++.",
-        "overlay_contentTwoConsole": "Il vous permet d'afficher une console en utilisant IMGUI pour l'interface utilisateur de conception, c'est utile pour déboguer lors de la programmation d'un mod.",
+        "overlay_contentTwoConsole": "Il vous permet d'afficher une console utilisant IMGUI pour l'interface, c'est utile pour déboguer lors de la programmation d'un mod.",
         "overlay_contentOneGravityGun": "Il s'agit d'un mod pour GTA V SOLO réalisé en C++.",
         "overlay_contentTwoGravityGun": "Il vous permet de jouer avec la gravité, de sorte que vous pouvez freeze une entité, la déplacer et la lancer loin."
     }
