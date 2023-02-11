@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="style.css" >
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>SuperCoolNinja | Portfolio</title>
   </head>
   <body>
     <!-- Background image used which get blur by the child div with the class blur -->
-    <img class="bg" src="./assets/night.jpg" alt="day background" >
+    <img class="bg" src="./assets/night.jpg" alt="day background" />
 
     <div class="blur">
       <div class="container">
@@ -17,10 +17,10 @@
         <header>
           <div id="container-me">
             <h1 id="container-me--title">Hi, I'm Samir</h1>
-            <p class="container-me--content">
+            <p class="container-me--content" id="container-me--contentOne">
               I'm a <strong class="bold">front-end</strong> developer.
             </p>
-            <p class="container-me--content">
+            <p class="container-me--content" id="container-me--contentTwo">
               A programming enthusiast since 2016.
             </p>
           </div>
@@ -45,25 +45,31 @@
           <!-- About Me -->
           <section id="container-about" class="playAnim opacityOff">
             <div class="wrapper-about">
-              <h6 class="title">ABOUT ME</h6>
-              <h3 class="subtitle">Who am I?</h3>
+              <h6 class="title" id="about-me--title">ABOUT ME</h6>
+              <h3 class="subtitle" id="about-me--subtitle">Who am I?</h3>
 
-              <p class="about-content">
+              <p class="about-content" id="about-me--contentOne">
                 Hi, I'm Samir, I'm a 24 year old
                 <strong class="bold">Web Developer</strong> with 5+ years of
                 experience programming in
-                <strong class="bold">Game modification</strong>.
+                <strong class="bold"
+                  >Game modification and +2 in Web development</strong
+                >.
               </p>
 
-              <p class="about-content">
-                I’m actually looking to work as
-                <strong class="bold">front-end</strong> to be more confident
-                with stuff like <strong class="bold">responsive</strong>,
-                <strong class="bold">animation</strong>,
-                <strong class="bold">user experience</strong>.
+              <p class="about-content" id="about-me--contentTwo">
+                Since I was a kid, I always liked to touch everything, starting
+                with video games modification, interface creation using web
+                languages, then to finish with website creation by pursuing 2
+                FullStack trainings that allowed me to learn more, It's been 2
+                years now that I'm fully involved in web development, and I'm
+                also interested in UX/UI for the visual side, and I'd like to
+                focus now on the front-end, especially on web page integration
+                because it's what suits me the best, it's in this field that I
+                feel most comfortable.
               </p>
             </div>
-            <img id="about-image" src="./assets/me.png" alt="image of samir" >
+            <img id="about-image" src="./assets/me.png" alt="image of samir" />
           </section>
 
           <!-- Experiences -->
@@ -78,7 +84,7 @@
                   src="./assets/skills/bootstrap.png"
                   alt="bootstrap icon"
                   title="bootstrap 5"
-                >
+                />
                 <p class="card-content">front-end</p>
               </li>
 
@@ -88,7 +94,7 @@
                   src="./assets/skills/csharp.png"
                   alt="csharp icon"
                   title="unity3D"
-               >
+                />
                 <p class="card-content">unity 3d</p>
               </li>
 
@@ -98,7 +104,7 @@
                   src="./assets/skills/lua.png"
                   alt="lua icon"
                   title="lua"
-                >
+                />
                 <p class="card-content">scripting</p>
               </li>
 
@@ -108,7 +114,7 @@
                   src="./assets/skills/php.png"
                   alt="php icon"
                   title="symfony 5"
-                >
+                />
                 <p class="card-content">back-end</p>
               </li>
 
@@ -118,7 +124,7 @@
                   src="./assets/skills/react.png"
                   alt="reactjs icon"
                   title="reactjs"
-               >
+                />
                 <p class="card-content">front-end</p>
               </li>
 
@@ -128,7 +134,7 @@
                   src="./assets/skills/mysql.png"
                   alt="mysql icon"
                   title="mysql"
-                >
+                />
                 <p class="card-content">back-end</p>
               </li>
 
@@ -138,7 +144,7 @@
                   src="./assets/skills/cpp.png"
                   alt="cpp icon"
                   title="c++"
-                >
+                />
                 <p class="card-content">Game Modding</p>
               </li>
 
@@ -148,7 +154,7 @@
                   src="./assets/skills/javascript.png"
                   alt="javascript icon"
                   title="javascript"
-                >
+                />
                 <p class="card-content">Front-end</p>
               </li>
             </ul>
@@ -156,7 +162,7 @@
 
           <!-- Projects -->
           <section id="container-projects">
-            <h6 class="title">PROJECTS</h6>
+            <h6 class="title" id="projets--title">PROJECTS</h6>
 
             <!-- WEB PROJECTS : -->
             <article>
@@ -165,13 +171,17 @@
               <ul class="wrapper-projects">
                 <li class="parent-overlay">
                   <div class="overlay">
-                    <h5>Rock Paper Scissors</h5>
+                    <h5
+                      id="overlay--title-rock_paper"
+                    >
+                      Rock Paper Scissors
+                    </h5>
                     <div>
-                      <p>
+                      <p id="overlay-contentOneRock_paper">
                         This is a complete front-end vanilla project designed to
                         put my knowledge into practice.
                       </p>
-                      <p>
+                      <p id="overlay-contentTwoRock_paper">
                         The goal is to play Rock Paper Scissors against a robot.
                       </p>
                     </div>
@@ -186,19 +196,21 @@
                     class="img-project"
                     src="./assets/projects/rock_paper_scissors.png"
                     alt="Rock Paper Scissors game image"
-                  >
+                  />
                 </li>
 
                 <li class="parent-overlay">
                   <div class="overlay">
                     <h5>TodoList</h5>
                     <div>
-                      <p>
+                      <p id="overlay-contentOneTodo">
                         This is a complete front-end React-JS project where i've
                         learn how to store data into the local storage.
                       </p>
 
-                      <p>manage your task the easy way.</p>
+                      <p id="overlay-contentTwoTodo">
+                        manage your task the easy way.
+                      </p>
                     </div>
                     <a
                       target="_blank"
@@ -210,19 +222,19 @@
                     class="img-project"
                     src="./assets/projects/todo.png"
                     alt="Todo image"
-                  >
+                  />
                 </li>
 
                 <li class="parent-overlay">
                   <div class="overlay">
                     <h5>Paint App</h5>
                     <div>
-                      <p>
+                      <p id="overlay-contentOne-Paint">
                         This is a complete front-end vanilla project where i've
                         learn how to use the canvas with javascript.
                       </p>
 
-                      <p>Draw what you want.</p>
+                      <p id="overlay-contentTwo-Paint">Draw what you want.</p>
                     </div>
                     <a
                       target="_blank"
@@ -234,7 +246,7 @@
                     class="img-project"
                     src="./assets/projects/paint.png"
                     alt="Paint image"
-                  >
+                  />
                 </li>
               </ul>
             </article>
@@ -248,12 +260,12 @@
                   <div class="overlay">
                     <h5>FlappyFlyTime</h5>
                     <div>
-                      <p>
+                      <p id="overlay-contentOne-Flappy">
                         This is a game project in C# made with Unity3D while I
                         was learning the API.
                       </p>
 
-                      <p>
+                      <p id="overlay-contentTwo-Flappy">
                         This game is a clone of Flappy Bird, you fly by avoiding
                         obstacles and challenging you to go further.
                       </p>
@@ -268,7 +280,7 @@
                     class="img-project"
                     src="./assets/projects/bird.png"
                     alt="flappy fly time game image"
-                  >
+                  />
                 </li>
               </ul>
             </article>
@@ -282,9 +294,11 @@
                   <div class="overlay">
                     <h5>GTA V MARKER</h5>
                     <div>
-                      <p>This is a mod for GTA V SOLO made using C++.</p>
+                      <p id="overlay-ContentOne-Marker">
+                        This is a mod for GTA V SOLO made using C++.
+                      </p>
 
-                      <p>
+                      <p id="overlay-ContentTwo-Marker">
                         It allow you to show a marker with the distance between
                         you and your waypoint set.
                       </p>
@@ -300,16 +314,18 @@
                     class="img-project"
                     src="./assets/projects/gtav_marker.png"
                     alt="GTA V Marker image"
-                  >
+                  />
                 </li>
 
                 <li class="parent-overlay">
                   <div class="overlay">
                     <h5>GTA V CONSOLE</h5>
                     <div>
-                      <p>This is a mod for GTA V SOLO made using C++.</p>
+                      <p id="overlay-contentOne-Console">
+                        This is a mod for GTA V SOLO made using C++.
+                      </p>
 
-                      <p>
+                      <p id="overlay-contentTwo-Console">
                         It allow you to show a console using IMGUI for the
                         design UI, it's usefull to debug when programming a mod.
                       </p>
@@ -324,16 +340,18 @@
                     class="img-project"
                     src="./assets/projects/gtav_console.png"
                     alt="GTA V Console image"
-                  >
+                  />
                 </li>
 
                 <li class="parent-overlay">
                   <div class="overlay">
                     <h5>GTA V GRAVITY GUN</h5>
                     <div>
-                      <p>This is a mod for GTA V SOLO made using C++.</p>
+                      <p id="overlay-contentOne-GravityGun">
+                        This is a mod for GTA V SOLO made using C++.
+                      </p>
 
-                      <p>
+                      <p id="overlay-contentTwo-GravityGun">
                         It allow you to play with gravity, so you can freeze
                         entity, move entity, and throw them far.
                       </p>
@@ -348,7 +366,7 @@
                     class="img-project"
                     src="./assets/projects/gravity_gun.png"
                     alt="GTA V Gravity gun image"
-                  >
+                  />
                 </li>
               </ul>
             </article>
@@ -365,7 +383,7 @@
                   src="./assets/skills/html.png"
                   alt="html icon"
                   title="html"
-                >
+                />
               </li>
               <li>
                 <img
@@ -373,7 +391,7 @@
                   src="./assets/skills/css.png"
                   alt="css icon"
                   title="css"
-                >
+                />
               </li>
               <li>
                 <img
@@ -381,7 +399,7 @@
                   src="./assets/skills/javascript.png"
                   alt="javascript icon"
                   title="javascript"
-                >
+                />
               </li>
             </ul>
             <p>© Copyright by SuperCoolNinja - 2023</p>

@@ -1,0 +1,27 @@
+{
+    "local_fr": {
+        "title_header": "Hey, je suis Samir",
+        "content_headerOne": "Je suis un Développeur front-end.",
+        "content_headerTwo": "Passionné de programmation depuis 2016.",
+        "about_me_title": "À PROPOS DE MOI",
+        "about_me_subtitle": "Qui suis je?",
+        "about_me_contentOne": "Bonjour, je suis Samir, je suis un développeur web de 24 ans avec 5+ ans d'expérience de programmation en modification de jeux et +2 ans en développement Web.",
+        "about_me_contentTwo": "Depuis tout petit, j'ai toujours aimé toucher à tout, en commençant par la modification de jeux vidéo, la création d'interface à l'aide de langages web, puis pour finir par la création de site internet en poursuivant 2 formations FullStack qui m'ont permis d'en apprendre plus, Cela fait maintenant 2 ans que je m'investis pleinement dans le développement web, et je m'intéresse également à l'UX/UI pour le côté visuel, et j'aimerais désormais me concentrer sur le front-end, notamment sur l'intégration de pages web car c'est ce qui me convient le mieux, c'est dans ce domaine que je me sens le plus à l'aise.",
+        "project_title": "PROJETS",
+        "overlay_title_rock_paper": "Pierre Papier Ciseaux",
+        "overlay_contentOne_rock_paper": "Ce projet front-end à étais créer sans framework avec du Vanilla HTML/CSS/JS.",
+        "overlay_contentTwo_rock_paper": "Le but est de jouer à Pierre Papier Ciseaux contre un robot.",
+        "overlay_contentOneTodo": "Ce projet front-end à étais créer avec le framework ReactJS qui ma permis de comprendre la persistance des données avec le local storage.",
+        "overlay_contentTwoTodo": "gérer vos tâches de manière simple.",
+        "overlay_contentOnePaint": "Ce projet front-end à étais créer sans framework avec du Vanilla HTML/CSS/JS et ma permis de comprendre l'usage du canvas avec javascript.",
+        "overlay_contentTwoPaint": "Dessine ce que tu veux.",
+        "overlay_contentOneFlappy": "Il s'agit d'un projet de jeu en C# réalisé avec Unity3D pendant que j'apprenais l'API.",
+        "overlay_contentTwoFlappy": "Ce jeu est un clone de Flappy Bird, vous volez en évitant les obstacles qui vous mettent au défi d'aller plus loin.",
+        "overlay_contentOneMarker": "Il s'agit d'un mod pour GTA V SOLO réalisé en C++.",
+        "overlay_contentTwoMarker": "Il vous permet d'afficher un marqueur avec la distance entre vous et votre point de repère défini.",
+        "overlay_contentOneConsole": "Il s'agit d'un mod pour GTA V SOLO réalisé en C++.",
+        "overlay_contentTwoConsole": "Il vous permet d'afficher une console en utilisant IMGUI pour l'interface utilisateur de conception, c'est utile pour déboguer lors de la programmation d'un mod.",
+        "overlay_contentOneGravityGun": "Il s'agit d'un mod pour GTA V SOLO réalisé en C++.",
+        "overlay_contentTwoGravityGun": "Il vous permet de jouer avec la gravité, de sorte que vous pouvez freeze une entité, la déplacer et la lancer loin."
+    }
+}
