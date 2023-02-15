@@ -30,21 +30,20 @@ body {
   font-family: "Oxygen", sans-serif;
   height: 100vh;
   width: 100%;
+  overflow: overlay;
 }
 
 /* SCROLL BAR */
 /* Track */
 ::-webkit-scrollbar {
   width: 1rem;
-}
-::-webkit-scrollbar-track {
-  background: #00000073;
+  height: 0.5rem;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
-  background: #00000073;
+  background: #fefefe38;
 }
 
 /* root variables */
@@ -79,7 +78,7 @@ body {
   --ts_overlay_link: 1rem;
 
   /* Phone screen fontSize */
-  --ps__titleHeaderSize: 5rem;
+  --ps__titleHeaderSize: 4rem;
   --ps_subTitleHeaderSize: 1.2rem;
   --ps_contentHeaderSize: 2rem;
   --ps_aboutContentSize: 1.7rem;
